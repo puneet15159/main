@@ -38,7 +38,10 @@ empCheck=$((RANDOM%3))
 workingHrs=`expr $getWorkingHrs $empCheck`
 
 totalEmpHrs=$(($workingHrs+$totalEmpHrs));
+dailywage=$(($totalEmpHrs*$empRatePerHr))
+daily[((counter++))]=$dailywage
 
 done
 
 totalSalary=$(($totalEmpHrs*$empRatePerHr))
+echo ${daily[@]}

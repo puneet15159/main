@@ -10,6 +10,7 @@ numberOfWorkingDays=20
 totalEmpHrs=0
 totalWorkingDays=0
 
+declare -A daily
 function getWorkingHrs(){
 empCheck=$((RANDOM%3))
 
@@ -44,4 +45,4 @@ daily[((counter++))]=$dailywage
 done
 
 totalSalary=$(($totalEmpHrs*$empRatePerHr))
-echo ${daily[@]}
+
